@@ -1,0 +1,60 @@
+{
+  "name": "praxis-patientenbildschirm",
+  "version": "1.0.0",
+  "description": "Animierte Patienteninformation für den 800x480-Zweitbildschirm der Praxis Dr. Florian Rasche",
+  "main": "main.js",
+  "author": "Praxis Dr. Florian Rasche",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "preview": "electron . --preview",
+    "build": "electron-builder --win nsis"
+  },
+  "build": {
+    "appId": "de.dr-rasche.patientenbildschirm",
+    "productName": "Praxisbildschirm",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "config.json",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "config.json",
+        "to": "config.json"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "runAfterFinish": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "deleteAppDataOnUninstall": false,
+      "artifactName": "Praxisbildschirm-Setup-${version}.exe",
+      "shortcutName": "Praxisbildschirm",
+      "uninstallDisplayName": "Praxisbildschirm (Patienteninfo)",
+      "language": "1031"
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.3.0",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

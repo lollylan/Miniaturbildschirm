@@ -1,0 +1,214 @@
+{
+  "_hinweis": "Diese Datei steuert den Patientenbildschirm. Nach dem Speichern wird sie automatisch neu geladen. Szenen mit \"enabled\": false werden übersprungen. \"from\"/\"until\" (Format MM-TT) zeigen eine Szene nur in diesem Zeitraum (Jahreswechsel erlaubt). Szenentypen: welcome, hero, steps, qr, team, stars. Eigene Bilder/Fotos: Datei neben die EXE legen (z. B. \"bilder/foto.jpg\") und den Pfad bei \"image\" bzw. \"photo\" eintragen.",
+  "praxis": {
+    "name": "Praxis Dr. Florian Rasche",
+    "subtitle": "Hausarzt in Würzburg",
+    "website": "www.dr-rasche.de",
+    "phone": "0931 / 72525"
+  },
+  "timing": {
+    "defaultDuration": 24,
+    "tickerInterval": 9
+  },
+  "ticker": [
+    "Bitte vereinbaren Sie immer einen Termin – am besten online auf www.dr-rasche.de",
+    "Patientinnen und Patienten mit Termin werden bevorzugt behandelt",
+    "Infektsprechstunde (Erkältung, Fieber, Magen-Darm) – bitte nur mit vorheriger Terminvereinbarung",
+    "Folgerezepte bequem online anfragen – als eRezept direkt in Ihre Apotheke",
+    "Videosprechstunde täglich – auch Krankschreibungen sind möglich",
+    "Grippeimpfung: Termine können ab sofort vereinbart werden",
+    "Vorsorgeuntersuchungen werden empfohlen – sprechen Sie uns an",
+    "Im Notfall: 112 · Ärztlicher Bereitschaftsdienst: 116 117"
+  ],
+  "scenes": [
+    {
+      "id": "willkommen",
+      "type": "welcome",
+      "enabled": true,
+      "duration": 15,
+      "theme": "light",
+      "title": "Herzlich willkommen",
+      "subtitle": "Schön, dass Sie da sind.",
+      "text": "Bitte melden Sie sich an der Anmeldung – wir sind gleich für Sie da."
+    },
+    {
+      "id": "hzv",
+      "type": "hero",
+      "enabled": true,
+      "duration": 25,
+      "theme": "light",
+      "badge": "Hausarztmodell",
+      "title": "Bessere Versorgung – ohne Zusatzkosten",
+      "bullets": [
+        "Mehr Zeit für Ihre Anliegen",
+        "Schnellere Facharzttermine",
+        "Ihr fester Ansprechpartner"
+      ],
+      "cta": "Einschreibung in wenigen Minuten – sprechen Sie uns an.",
+      "image": "assets/img/hzv.jpg",
+      "imagePosition": "68% 50%",
+      "video": "assets/video/hzv.webm"
+    },
+    {
+      "id": "hzv-schritte",
+      "type": "steps",
+      "enabled": true,
+      "duration": 22,
+      "theme": "dark",
+      "badge": "Hausarztmodell (HZV)",
+      "title": "So einfach geht's",
+      "steps": [
+        {
+          "icon": "chat",
+          "title": "Nachfragen",
+          "text": "Einfach am Empfang ansprechen"
+        },
+        {
+          "icon": "pen",
+          "title": "Unterschreiben",
+          "text": "Ein Formular, kostenlos"
+        },
+        {
+          "icon": "check",
+          "title": "Fertig",
+          "text": "Gilt ab dem nächsten Quartal"
+        }
+      ],
+      "cta": "Das Hausarztmodell bleibt von den Kürzungen des GKV-Spargesetzes weitgehend verschont."
+    },
+    {
+      "id": "online",
+      "type": "qr",
+      "enabled": true,
+      "duration": 28,
+      "theme": "light",
+      "badge": "Digitale Praxis",
+      "title": "Vieles geht online",
+      "bullets": [
+        "Termine rund um die Uhr buchen",
+        "Folgerezept anfragen",
+        "Videosprechstunde täglich",
+        "Fragebögen bequem zu Hause ausfüllen"
+      ],
+      "qr": "https://www.dr-rasche.de",
+      "qrLabel": "www.dr-rasche.de",
+      "qrHint": "Einfach mit dem Handy scannen"
+    },
+    {
+      "id": "termin",
+      "type": "hero",
+      "enabled": true,
+      "duration": 25,
+      "theme": "light",
+      "badge": "Kurze Wartezeit",
+      "title": "Mit Termin geht's schneller",
+      "text": "Patientinnen und Patienten mit Termin werden bevorzugt behandelt. Ohne Termin kann es zu längeren Wartezeiten kommen.",
+      "cta": "Am besten online buchen – jederzeit auf www.dr-rasche.de",
+      "image": "assets/img/termin.jpg",
+      "qr": "https://www.dr-rasche.de/termin.html",
+      "qrLabel": "Termin buchen",
+      "imagePosition": "60% 50%",
+      "video": "assets/video/termin.webm"
+    },
+    {
+      "id": "infekt",
+      "type": "hero",
+      "enabled": true,
+      "duration": 25,
+      "theme": "light",
+      "badge": "Bitte beachten",
+      "title": "Infektsprechstunde",
+      "text": "Bei Erkältung, Fieber, Husten oder Magen-Darm-Beschwerden behandeln wir Sie in unserer Infektsprechstunde – getrennt von den übrigen Patientinnen und Patienten.",
+      "cta": "Bitte vorher einen Termin vereinbaren – online oder telefonisch.",
+      "image": "assets/img/infekt.jpg",
+      "imagePosition": "50% 50%",
+      "qr": "https://www.dr-rasche.de/termin.html",
+      "qrLabel": "Termin buchen",
+      "video": "assets/video/infekt.webm"
+    },
+    {
+      "id": "grippe",
+      "type": "hero",
+      "enabled": true,
+      "duration": 22,
+      "theme": "light",
+      "from": "09-01",
+      "until": "01-31",
+      "badge": "Herbst & Winter",
+      "title": "Grippeimpfung – jetzt Termin sichern",
+      "text": "Die Impfsaison beginnt. Vereinbaren Sie schon jetzt Ihren Impftermin – online oder direkt an der Anmeldung.",
+      "cta": "Empfohlen ab 60, bei chronischen Erkrankungen und in der Schwangerschaft.",
+      "image": "assets/img/grippe.jpg",
+      "imagePosition": "58% 50%",
+      "video": "assets/video/grippe.webm"
+    },
+    {
+      "id": "vorsorge",
+      "type": "hero",
+      "enabled": true,
+      "duration": 25,
+      "theme": "light",
+      "badge": "Vorsorge",
+      "title": "Vorsorge lohnt sich",
+      "bullets": [
+        "Gesundheits-Check-up",
+        "Krebsvorsorge und Hautkrebs-Screening",
+        "Nach Bedarf ergänzt um sinnvolle Selbstzahlerleistungen (IGeL)"
+      ],
+      "cta": "Sprechen Sie uns an – wir beraten Sie gerne zu den Details.",
+      "image": "assets/img/vorsorge.jpg",
+      "imagePosition": "50% 50%",
+      "video": "assets/video/vorsorge.webm"
+    },
+    {
+      "id": "video",
+      "type": "hero",
+      "enabled": true,
+      "duration": 20,
+      "theme": "light",
+      "badge": "Täglich",
+      "title": "Videosprechstunde",
+      "text": "Arzttermin per Video statt Wartezimmer – auch Krankschreibungen sind möglich.",
+      "cta": "Buchbar über www.dr-rasche.de",
+      "image": "assets/img/online.jpg",
+      "imagePosition": "55% 50%",
+      "video": "assets/video/online.webm"
+    },
+    {
+      "id": "team",
+      "type": "team",
+      "enabled": true,
+      "duration": 22,
+      "theme": "light",
+      "badge": "Neu im Team",
+      "title": "Wir stellen vor",
+      "persons": [
+        {
+          "name": "Darian Ahmadi",
+          "role": "Auszubildender zum Medizinischen Fachangestellten",
+          "text": "Unterstützt das Team an der Anmeldung und in der Behandlung.",
+          "photo": ""
+        },
+        {
+          "name": "David Vrhovac",
+          "role": "Arzt in Weiterbildung Allgemeinmedizin",
+          "text": "Verstärkt unser ärztliches Team in der Sprechstunde.",
+          "photo": ""
+        }
+      ],
+      "cta": "Wir freuen uns über die Verstärkung – herzlich willkommen!"
+    },
+    {
+      "id": "bewertung",
+      "type": "stars",
+      "enabled": true,
+      "duration": 25,
+      "theme": "dark",
+      "title": "Zufrieden mit uns?",
+      "text": "Dann freuen wir uns sehr über Ihre Bewertung bei Google.",
+      "qr": "https://www.google.com/maps/search/?api=1&query=Praxis+Dr.+med.+Florian+Rasche+Huttenstr.+6+W%C3%BCrzburg",
+      "qrLabel": "Google-Bewertung",
+      "qrHint": "QR-Code scannen – dauert nur eine Minute"
+    }
+  ]
+}
